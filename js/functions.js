@@ -8,7 +8,6 @@ function validar_fatorial() {
         resposta.innerHTML = 'O número deve ser inteiro positivo!'
     } else {
         numero = parseInt(numero.value)
-        resposta.innerHTML = ''
         resposta.innerHTML = fatorial(numero)
     }
 }

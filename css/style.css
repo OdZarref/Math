@@ -87,10 +87,13 @@ footer {
 }
 
 footer p {
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-family: monospace, Helvetica, Arial, sans-serif;
 }
 
+footer img {
+    margin-left: 10px;
+}
 /*
 MEDIA QUERIES
 */
