@@ -8,8 +8,14 @@
     flex-direction: column;
 }
 
+.section-sobre div.coluna-itens {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0;
+}
 .section-sobre a.estatico {
-    background-color: #00a8cc;
+    background-color: #16817a;
 }
 
 .section-sobre a.estatico h2 {

@@ -2,18 +2,18 @@
 GERAL
 */
 * h2 {
-    background-color: rgba(24, 0, 21, 0.5);
+    background-color: rgba(24, 0, 21, 0.322);
 }
 
 body {
     font-family: 'Dosis', sans-serif;
-    background-color: #005082;
+    background-color: #024249;
     color: white;
     font-size: 1.2em;
 }
 
 nav  img {
-    background-color: #004169;
+    background-color: #00303581;
     padding: 15px 15px 0px 15px;
 }
 
@@ -28,7 +28,7 @@ MENU
 */
 
 nav {
-    background-color: #005082;
+    background-color: #0242499c;
 }
 
 nav ul {
@@ -60,7 +60,7 @@ CONTEÚDO
 */
 
 section {
-    background-color: #00a8cc;
+    background-color: #16817a;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,7 +77,7 @@ section a {
 }
 
 section a:hover {
-    background-color: #005082;
+    background-color: #024249;
     color: white;
 }
 
@@ -86,7 +86,7 @@ RODAPÉ
 */
 
 footer {
-    background-color: #005082;
+    background-color: #024249;
 }
 
 footer p {
