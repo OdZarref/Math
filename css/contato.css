@@ -9,7 +9,16 @@
 }
 
 .section-sobre a.estatico {
-    background-color: #7828FD;
+    background-color: #00a8cc;
+}
+
+.section-sobre a.estatico h2 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.section-sobre div a img {
+    width: 75px;
 }
 
 @media screen and (min-width: 768px) {
