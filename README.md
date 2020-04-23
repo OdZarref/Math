@@ -1,6 +1,6 @@
 # Math! Project
 
-> Site que calcula uma série de funções. Feito inteiramente com a intensão de por em prática meus apreendizados.
+> Site que calcula uma série de funções. Feito inteiramente com a intensão de por em prática meus apreendizados. Acesse https://odzarref.github.io/Math
 
 ## Progresso
 
