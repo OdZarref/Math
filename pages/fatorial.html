@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../icons/favicon2.png">
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet"> 
+        <title>Fatorial</title>
+    </head>
+    <body>
+        <nav>
+            <a href="../index.html" target="_self">
+                <img src="../icons/logo.png" id="logo">
+            </a>
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        Início
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="calcule.html">
+                        Calcule!
+                    </a>
+                </li>
+                <li>
+                    <a href="sobre.html">
+                        Sobre
+                    </a>
+                </li>
+                <li>
+                    <a href="contato.html">
+                    Contato
+                </a>
+            </li>
+            </ul>
+        </nav>
+
+        <section>
+            <h2>Fatorial</h2>
+            <p>Dado como n!. É o produto das multiplicações de n pelos números inteiros e naturais menores que ele (com excessão do zero).</p>
+            <div>
+                <input type="number" name="caixa_texto_numero" id="caixa_texto_numero">
+                <input type="button" value="Calcule!"id="verificar" onclick="validar_fatorial()">
+                <p id="resposta"><br></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Desenvolvido por OdLabs</p>
+            <div>
+                <a href="https://twitter.com/OdZarref" target="_blank">
+                    <img src="../icons/twitter-40x40.png">
+                </a>
+                <a href="https://instagram.com/Od_Zarref" target="_blank">
+                    <img src="../icons/instagram-40x40.png">
+                </a>
+            </div>
+        </footer>
+        <script src="../js/functions.js"></script>
+    </body>
+</html>
