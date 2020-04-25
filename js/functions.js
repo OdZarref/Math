@@ -38,14 +38,3 @@ function calcula_primo (possivel_primo) {
         return false
     }
 }
-
-
-function mmc(numero, numero2) {
-    var fatores = []
-
-    while (numero != 1 & numero2 != 1) {
-        fatores = []
-    }
-}
-
-console.log(calcula_primo(11))
