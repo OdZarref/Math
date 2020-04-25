@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="../css/normalize.css">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet"> 
-        <title>Calcule!</title>
+        <title></title>
     </head>
     <body>
         <nav>
@@ -38,40 +38,41 @@
             </ul>
         </nav>
 
-        <section>
-            <div id="primo">
-                <h3>
-                    <a href="primo.html">
-                        Número Primo
-                    </a>
-                </h3>
-                <p>Um número primo. É aquele que tem apenas dois divisores. O um e ele mesmo.</p>
-            </div>
-            <div id="fatorial">
-                <h3>
-                    <a href="fatorial.html">
-                        Fatorial
-                    </a>
-                </h3>
-                <p>Dado como n!. É o produto das multiplicações de n pelos números inteiros e naturais menores que ele (com excessão do zero).</p>
-            </div>
-            <div id="mmc">
-                <h3>
-                    <a href="mmc.html">
-                        Mínimo Múltiplo Comum
-                    </a>
-                </h3>
-                <p>Tendo como base a e b, o mmc(a, b) é o menor produto simultâneo de a e b.</p>
-            </div>
-            <div id="mdc">
-                <h3>
-                    <a href="mdc.html">
-                        Máximo Divisor Comum
-                    </a>
-                </h3>
-                <p>Seguindo uma lógica parecida com o mmc, o mdc(a, b) é o menor número que divide a e b.</p>
+        <section class="conteudo">
+            <h2>Número Primo</h2>
+            <p>Um número primo. É aquele que tem apenas dois divisores. O um e ele mesmo.</p>
+            <div>
+                <input type="number" id="caixa_texto_numero">
+                <input type="button" value="Calcule!" onclick="verificar_primo()">
+                <p id="resposta"><br></p>
             </div>
 
+            <div class="texto">
+                <h3>Explicação</h3>
+                <p>Trabalhando com os números naturais, temos 2 grandes grupos. Os primos e os compostos. Primo é aquele que possui apenas dois divisores, 1 e si próprio. Sendo assim, qualquer outro número que tiver mais que 2 divisores, é denominado composto. O jeito mais fácil de saber se n é primo, é ver se ele é divisível pelos primos menores que ele. Se n for divisível por qualquer primo, então n é composto. Senão, é primo.</p>
+                <p>Exemplo: 3 é primo? O primeiro número primo e único menor que ele é o 2. Então 3/2 é igual a 1 e resto 1. Logo, 3 não é divisível pelos primos menores que ele. Então ele é primo!</p>
+                <div class="codigo">
+                    <h3>Código Javascript</h3>
+                    <pre><p class="codigo">function calcula_primo(possivel_primo) {
+    divisores = 0
+    numero = 0
+
+    while (possivel_primo != numero) {
+        numero ++
+
+        if (possivel_primo % numero == 0) {
+            divisores ++
+        }
+    }
+
+    if (divisores == 2) {
+        return true
+    } else {
+        return false
+    }
+}</p></pre>
+                </div>
+            </div>
         </section>
 
         <footer>
@@ -85,5 +86,6 @@
                 </a>
             </div>
         </footer>
+    <script src="../js/functions.js"></script>
     </body>
 </html>
