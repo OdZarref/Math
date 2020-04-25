@@ -15,6 +15,7 @@
     * [ ] Black Mode e White Mode
     * [ ] Resposividade com mobile
 * [ ] Páginas de Cálculos
+    * [x] Número Primo
     * [x] Fatorar um Número
     * [ ] Mínimo Múltiplo Comum
     * [ ] Máximo Divisor Comum
