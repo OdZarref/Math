@@ -20,7 +20,21 @@ function fatorial(n) {
     }
 }
 
-function calcula_primo (possivel_primo) {
+function verificar_primo() {
+    var numero = window.document.querySelector('input#caixa_texto_numero')
+    var resposta = window.document.querySelector('p#resposta')
+
+    if (numero.value.length == 0) {
+        resposta.innerHTML = 'Preencha o campo acima!'
+    } else if (numero.value < 0) {
+        resposta.innerHTML = 'O número deve ser inteiro positivo!'
+    } else {
+        numero = parseInt(numero.value)
+        resposta.innerHTML = calcular_primo(numero)
+    }
+}
+
+function calcular_primo(possivel_primo) {
     divisores = 0
     numero = 0
 
@@ -33,8 +47,8 @@ function calcula_primo (possivel_primo) {
     }
 
     if (divisores == 2) {
-        return true
+        return 'É primo!'
     } else {
-        return false
+        return 'Não é primo!'
     }
 }
