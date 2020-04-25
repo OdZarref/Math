@@ -19,3 +19,33 @@ function fatorial(n) {
         return n * fatorial(n-1)
     }
 }
+
+function calcula_primo (possivel_primo) {
+    divisores = 0
+    numero = 0
+
+    while (possivel_primo != numero) {
+        numero ++
+
+        if (possivel_primo % numero == 0) {
+            divisores ++
+        }
+    }
+
+    if (divisores == 2) {
+        return true
+    } else {
+        return false
+    }
+}
+
+
+function mmc(numero, numero2) {
+    var fatores = []
+
+    while (numero != 1 & numero2 != 1) {
+        fatores = []
+    }
+}
+
+console.log(calcula_primo(11))
