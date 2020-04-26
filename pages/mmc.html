@@ -40,17 +40,65 @@
 
         <section>
             <h2>Mínimo Múltiplo Comum</h2>
-            <p>Tendo como base a e b, o mmc(a, b) é o menor produto simultâneo de a e b.</p>
+            <p>Tendo como base a e b, o mmc(a, b) é o menor múltiplo simultâneo de a e b.</p>
             <div>
-                <input type="number" id="caixa_texto_numero1" placeholder="digite um número">
-                <input type="number" id="caixa_texto_numero2" placeholder="digite um número">
+                <input type="number" class="caixa_input" id="caixa_texto_numero1" placeholder="digite um número">
+                <input type="number" class="caixa_input" id="caixa_texto_numero2" placeholder="digite um número">
                 <input type="button" value="Calcule!" onclick="verificar_mmc()">
                 <p id="resposta"><br></p>
+            </div>
+            <div class="texto">
+                <h3>Explicação</h3>
+                <p>Observe as tabuadas abaixo:</p>
+                <table id="padrao">
+                        <tr><td>3 x 1 = </td><td class="borda">3</td><td>6 x 1 = </td><td class="borda">6</td><td>10 x 1 = </td><td>10</td></tr>
+                        <tr><td>3 x 2 = </td><td class="borda">6</td><td>6 x 2 = </td><td class="borda">12</td><td>10 x 2 = </td><td>20</td></tr>
+                        <tr><td>3 x 3 = </td><td class="borda">9</td><td>6 x 3 = </td><td class="borda">18</td><td>10 x 3 = </td><td><span style="color:#f42126">30</span></td></tr>
+                        <tr><td>3 x 4 = </td><td class="borda">12</td><td>6 x 4 = </td><td class="borda">24</td><td>10 x 4 = </td><td>40</td></tr>
+                        <tr><td>3 x 5 = </td><td class="borda">15</td><td>6 x 5 = </td><td class="borda"><span style="color: #f42126">30</span></td><td>10 x 5 = </td><td>50</td></tr>
+                        <tr><td>3 x 6 = </td><td class="borda">18</td><td>6 x 6 = </td><td class="borda">36</td><td>10 x 6 = </td><td>60</td></tr>
+                        <tr><td>3 x 7 = </td><td class="borda">21</td><td>6 x 7 = </td><td class="borda">42</td><td>10 x 7 = </td><td>70</td></tr>
+                        <tr><td>3 x 8 = </td><td class="borda">24</td><td>6 x 8 = </td><td class="borda">48</td><td>10 x 8 = </td><td>80</td></tr>
+                        <tr><td>3 x 9 = </td><td class="borda">27</td><td>6 x 9 = </td><td class="borda">54</td><td>10 x 9 = </td><td>90</td></tr>
+                        <tr><td>3 x 10 = </td><td class="borda"><span style="color: #f42126">30</span></td><td>6 x 10 = </td><td class="borda">60</td><td>10 x 10 = </td><td>100</td></tr>
+                </table>
+                <p>Note que 30 é o menor produto que aparece nas multiplicações de 3, 6 e 10. Logo, o mmc(3, 6, 10) é o 30!</p>
+                <p>Para explicação o exemplo acima serve muito bem, mas como notamos, para calcular números maiores, é extremamente massante. Para isso existe um método de encontrar o mmc de dois ou mais números através da multiplicação dos fatores primos dos mesmos. Observe abaixo:</p>
+                <table id="padrao">
+                    <caption>mmc(3, 6, 10)</caption>
+                    <tr><td>&nbsp3&nbsp</td><td>&nbsp6&nbsp</td><td class="borda">&nbsp10&nbsp</td><td>&nbsp2</td></tr>
+                    <tr><td>&nbsp3&nbsp</td><td>&nbsp3&nbsp</td><td class="borda">&nbsp5&nbsp</td><td>&nbsp3</td></tr>
+                    <tr><td>&nbsp1&nbsp</td><td>&nbsp1&nbsp</td><td class="borda">&nbsp5&nbsp</td><td>&nbsp5</td></tr>
+                    <tr><td>&nbsp1&nbsp</td><td>&nbsp1&nbsp</td><td class="borda">&nbsp1&nbsp</td><td class="borda-cima">&nbsp2 x 3 x 5 = 30</td></tr>
+                </table>
+                <p>Fato é que existe uma relação entre o mmc e mdc. Sendo assim é possível calcular o mmc através do mdc. Para isso utilizei a seguinte função:</p>
+                <p>mmc(a, b) = a x (b / mdc(a, b))</p>
+                <p>Se quisermos calcular o mmc de mais de 2 números. Para o mmc(a, b, c). Calculamos primeiro o mmc(a, b), e depois calculamos o mmc do resultado com c. Exemplo:</p>
+                <p>mmc(a, b, c) = mmc(mmc(a, b), c)</p>
+                <div class="codigo">
+                    <h3>Código Javascript</h3>
+                    <pre><p class="codigo">// Calcula o mdc
+function mdc(a, b) {
+    while (b != 0) {
+        resto = a % b
+        a = b
+        b = resto
+    }
+
+    return a
+}
+
+// Calcula o mmc com base no mdc
+function mmc(a, b) {
+    return a * (b / mdc(a, b))
+}
+                    </p></pre>
+                </div>
             </div>
         </section>
 
         <footer>
-            <p>Desenvolvido por Od</p>
+            <span style="text-align: center"><p>Desenvolvido por Od<br>2020</p></span>
             <div>
                 <a href="https://twitter.com/OdZarref" target="_blank">
                     <img src="../icons/twitter-color-40x40.png" alt="twitter">
