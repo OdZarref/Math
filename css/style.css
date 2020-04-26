@@ -97,7 +97,7 @@ div.codigo p.codigo {
 
 div.texto table {
     margin: auto;
-    text-align: left;
+    text-align: center;
     border-spacing: 0px;
     border: 1px solid black;
 }
