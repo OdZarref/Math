@@ -67,10 +67,6 @@ function verificar_mmc() {
     }
 }
 
-function mmc(a, b) {
-    return a * (b / mdc(a, b))
-}
-
 function mdc(a, b) {
     while (b != 0) {
         resto = a % b
@@ -79,4 +75,8 @@ function mdc(a, b) {
     }
 
     return a
+}
+
+function mmc(a, b) {
+    return a * (b / mdc(a, b))
 }
