@@ -23,6 +23,10 @@ nav, footer, nav ul {
     align-items: center;
 }
 
+input.caixa_input {
+    width: 100px;
+}
+
 /*
 MENU
 */
@@ -91,6 +95,24 @@ div.codigo p.codigo {
     width: 300px;
 }
 
+div.texto table {
+    margin: auto;
+    text-align: left;
+    border-spacing: 0px;
+    border: 1px solid black;
+}
+div.texto table caption{
+    text-align: left;
+}
+
+td.borda {
+    border-right: 1px solid black;
+}
+
+td.borda-cima {
+    border-top: 1px solid black;
+}
+
 /*
 RODAPÉ
 */
@@ -128,12 +150,16 @@ MEDIA QUERIES
         justify-content: center;
     }
 
+    input.input {
+        width: 150px;
+    }
+
     div.texto {
         text-align: center;
     }
 
     div.texto p {
-        text-align: left;
+        text-align: center;
         text-indent: 30px;
         font-family: 'Dosis', sans-serif;
     }
