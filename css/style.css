@@ -99,7 +99,7 @@ div.codigo p.codigo {
 div.texto table {
     background-color: rgba(0, 0, 0, 0.329);
     margin: auto;
-    text-align: center;
+    text-align: left;
     border-spacing: 0px;
     border: 1px solid black;
 }
