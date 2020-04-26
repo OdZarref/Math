@@ -93,9 +93,11 @@ div.codigo p.codigo {
     font-family: 'Dosis', sans-serif;
     text-indent: 0px;
     width: 300px;
+    border: 1px solid black;
 }
 
 div.texto table {
+    background-color: rgba(0, 0, 0, 0.329);
     margin: auto;
     text-align: center;
     border-spacing: 0px;
