@@ -10,10 +10,10 @@
     * [x] Definir Layout
     * [x] Página Principal
     * [x] Calcule!
-    * [ ] Contato
-    * [ ] Sobre
+    * [x] Contato
+    * [x] Sobre
     * [ ] Black Mode e White Mode
-    * [ ] Resposividade com mobile
+    * [x] Resposividade com mobile
 * [ ] Páginas de Cálculos
     * [x] Número Primo
     * [x] Fatorar um Número
