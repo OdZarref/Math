@@ -32,15 +32,21 @@
                 </li>
                 <li>
                     <a href="contato.html">
-                    Contato
+                        Contato
                 </a>
             </li>
             </ul>
         </nav>
 
         <section>
-            <h2>Mínimo Múltiplo Comum</h2>
+            <h2>Máximo Divisor Comum</h2>
             <p>Tendo como base a e b, o mmc(a, b) é o menor produto simultâneo de a e b.</p>
+            <div>
+                <input type="number" class="caixa_input" id="caixa_texto_numero1" placeholder="ex: 20">
+                <input type="number" class="caixa_input" id="caixa_texto_numero2" placeholder="ex: 43">
+                <input type="button" value="Calcule!" onclick="verificar_mdc()">
+                <p id="resposta"><br></p>
+            </div>
         </section>
 
         <footer>
@@ -54,5 +60,6 @@
                 </a>
             </div>
         </footer>
+        <script src="../js/functions.js"></script>
     </body>
 </html>
