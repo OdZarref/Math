@@ -54,9 +54,9 @@ function calcular_primo(possivel_primo) {
 }
 
 function verificar_mmc() {
-    numero1 = document.querySelector('input#caixa_texto_numero1')
-    numero2 = document.querySelector('input#caixa_texto_numero2')
-    resposta = document.querySelector('p#resposta')
+    var numero1 = document.querySelector('input#caixa_texto_numero1')
+    var numero2 = document.querySelector('input#caixa_texto_numero2')
+    var resposta = document.querySelector('p#resposta')
 
     if (numero1.value.length == 0 || numero2.value.length == 0) {
         resposta.innerHTML = 'Preencha os dois campos!'    
@@ -64,6 +64,24 @@ function verificar_mmc() {
         resposta.innerHTML = 'Os números devem ser positivos!'
     } else {
         resposta.innerHTML = mmc(numero1.value, numero2.value)
+    }
+}
+
+function mmc(a, b) {
+    return a * (b / mdc(a, b))
+}
+
+function verificar_mdc() {
+    var numero1 = document.querySelector('input#caixa_texto_numero1')
+    var numero2 = document.querySelector('input#caixa_texto_numero2')
+    var resposta = document.querySelector('p#resposta')
+
+    if (numero1.value.length == 0 || numero2.value.length == 0) {
+        resposta.innerHTML = 'Preencha os dois campos!'    
+    } else if (numero1.value.length < 0 || numero2.value.length < 0) {
+        resposta.innerHTML = 'Os números devem ser positivos!'
+    } else {
+        resposta.innerHTML = `mdc(${numero1.value}, ${numero2.value}) = ${mdc(numero1.value, numero2.value)}`
     }
 }
 
@@ -75,8 +93,4 @@ function mdc(a, b) {
     }
 
     return a
-}
-
-function mmc(a, b) {
-    return a * (b / mdc(a, b))
 }
