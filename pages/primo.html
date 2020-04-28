@@ -42,18 +42,18 @@
             <h1>Número Primo</h1>
             <p>Um número primo. É aquele que tem apenas dois divisores. O um e ele mesmo.</p>
             <div>
-                <input type="number" id="caixa_texto_numero" placeholder="digite um número">
+                <input type="number" id="caixa_texto_numero" placeholder="ex: 11">
                 <input type="button" value="Calcule!" onclick="verificar_primo()">
                 <p id="resposta"><br></p>
             </div>
-
+            <h2>Explicação</h2>
             <div class="texto">
-                <h2>Explicação</h2>
                 <p>Trabalhando com os números naturais, temos 2 grandes grupos. Os primos e os compostos. Primo é aquele que possui apenas dois divisores, 1 e si próprio. Sendo assim, qualquer outro número que tiver mais que 2 divisores, é denominado composto. O jeito mais fácil de saber se n é primo, é ver se ele é divisível pelos primos menores que ele. Se n for divisível por qualquer primo, então n é composto. Senão, é primo.</p>
                 <p>Exemplo: 3 é primo? O primeiro número primo e único menor que ele é o 2. Então 3/2 é igual a 1 e resto 1. Logo, 3 não é divisível pelos primos menores que ele. Então ele é primo!</p>
-                <div class="codigo">
-                    <h2>Código Javascript</h2>
-                    <pre><p class="codigo">function calcular_primo(possivel_primo) {
+            </div>
+            <h2>Código Javascript</h2>
+            <div class="codigo">
+                <pre><p class="codigo">function calcular_primo(possivel_primo) {
     divisores = 0
     numero = 0
 
@@ -71,7 +71,6 @@
         return false
     }
 }</p></pre>
-                </div>
             </div>
         </section>
 

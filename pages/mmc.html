@@ -47,8 +47,8 @@
                 <input type="button" value="Calcule!" onclick="verificar_mmc()">
                 <p id="resposta"><br></p>
             </div>
+            <h2>Explicação</h2>
             <div class="texto">
-                <h2>Explicação</h2>
                 <p>Observe as tabuadas abaixo:</p>
                 <table id="padrao">
                         <tr><td>3 x 1 = </td><td class="borda">3</td><td>6 x 1 = </td><td class="borda">6</td><td>10 x 1 = </td><td>10</td></tr>
@@ -75,8 +75,8 @@
                 <p>mmc(a, b) = a x (b / mdc(a, b))</p>
                 <p>Se quisermos calcular o mmc de mais de 2 números. Para o mmc(a, b, c). Calculamos primeiro o mmc(a, b), e depois calculamos o mmc do resultado com c. Exemplo:</p>
                 <p>mmc(a, b, c) = mmc(mmc(a, b), c)</p>
+                <h2>Código Javascript</h2>
                 <div class="codigo">
-                    <h2>Código Javascript</h2>
                     <pre><p class="codigo">// Calcula o mdc
 function mdc(a, b) {
     while (b != 0) {

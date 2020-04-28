@@ -42,15 +42,15 @@
             <h1>Fatorial</h1>
             <p>O cálculo do fatorial de n, consiste na multiplicação sucessiva de n pelos números naturais menores que ele.</p>
             <div>
-                <input type="number" name="caixa_texto_numero" id="caixa_texto_numero" placeholder="digite um número">
+                <input type="number" name="caixa_texto_numero" id="caixa_texto_numero" placeholder="ex: 5">
                 <input type="button" value="Calcule!"id="verificar" onclick="validar_fatorial()">
                 <p id="resposta"><br></p>
             </div>
             <div class="texto">
                 <p>Exemplo: 5! = 5 . (5-1) . (5-2) . (5-3) . (5-4) = 5 . 4 . 3 . 2 . 1 = 120</p>
             </div>
+            <h2>Código Javascript</h2>
             <div class="codigo">
-                <h2>Código Javascript</h2>
                 <pre><p class="codigo">function fatorial(n) {
     if (n == 0 || n == 1) {
         return 1
