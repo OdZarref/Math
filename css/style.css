@@ -5,6 +5,10 @@ GERAL
     background-color: rgba(24, 0, 21, 0.322);
 }
 
+* h2 {
+    background-color: rgba(24, 0, 21, 0.199);
+}
+
 body {
     font-family: 'Dosis', sans-serif;
     background-color: #024249;
