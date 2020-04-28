@@ -75,9 +75,10 @@
                 <p>mmc(a, b) = a x (b / mdc(a, b))</p>
                 <p>Se quisermos calcular o mmc de mais de 2 números. Para o mmc(a, b, c). Calculamos primeiro o mmc(a, b), e depois calculamos o mmc do resultado com c. Exemplo:</p>
                 <p>mmc(a, b, c) = mmc(mmc(a, b), c)</p>
-                <h2>Código Javascript</h2>
-                <div class="codigo">
-                    <pre><p class="codigo">// Calcula o mdc
+            </div>
+            <h2>Código Javascript</h2>
+            <div class="codigo">
+                <pre><p class="codigo">// Calcula o mdc
 function mdc(a, b) {
     while (b != 0) {
         resto = a % b
@@ -91,9 +92,7 @@ function mdc(a, b) {
 // Calcula o mmc com base no mdc
 function mmc(a, b) {
     return a * (b / mdc(a, b))
-}
-                    </p></pre>
-                </div>
+}</p></pre>
             </div>
         </section>
 
