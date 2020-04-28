@@ -39,13 +39,56 @@
         </nav>
 
         <section>
-            <h2>Máximo Divisor Comum</h2>
-            <p>Tendo como base a e b, o mmc(a, b) é o menor produto simultâneo de a e b.</p>
+            <h1>Máximo Divisor Comum</h1>
+            <p>O mdc(a, b) é o menor número que divide a e b.</p>
             <div>
                 <input type="number" class="caixa_input" id="caixa_texto_numero1" placeholder="ex: 20">
                 <input type="number" class="caixa_input" id="caixa_texto_numero2" placeholder="ex: 43">
                 <input type="button" value="Calcule!" onclick="verificar_mdc()">
                 <p id="resposta"><br></p>
+            </div>
+            <div class="texto">
+                <h2>Explicação</h2>
+                <p>Para a explicação, utilizaremos 32, 48 e 64. Observe seus divisores abaixo:</p>
+                <p>Divisores do 32 são: 1, 2, 4, 8, 16, 32</p>
+                <p>Divisores do 48 são: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48</p>
+                <p>Divisores do 64 são: 1, 2, 4, 8, 16, 32, 64</p>
+                <p>Podemos ver que o maior número que dividiu o 32, 48 e 64 foi o 16. Sendo assim, ele é o mdc(32, 48, 64).</p>
+                <h3>Fatoração Simultânea</h3>
+                <p>É possível calcular o mdc de quantos números quisermos utilizando a fatoração simultânea. Fatoramos os números simultaneamente e multiplicamos pelos fatores que dividiram toda a linha.</p>
+                <table>
+                    <caption>mmc(32, 48, 64)</caption>
+                    <tr><td>&nbsp32&nbsp</td><td>&nbsp48&nbsp</td><td class="borda">&nbsp64&nbsp</td><td>&nbsp<span style="color: red;">2</span>&nbsp</td></tr>
+                    <tr><td>&nbsp16&nbsp</td><td>&nbsp24&nbsp</td><td class="borda">&nbsp32&nbsp</td><td>&nbsp<span style="color: red;">2</span>&nbsp</td></tr>
+                    <tr><td>&nbsp8&nbsp</td><td>&nbsp12&nbsp</td><td class="borda">&nbsp16&nbsp</td><td>&nbsp<span style="color: red;">2</span>&nbsp</td></tr>
+                    <tr><td>&nbsp4&nbsp</td><td>&nbsp6&nbsp</td><td class="borda">&nbsp8&nbsp</td><td>&nbsp<span style="color: red;">2</span>&nbsp</td></tr>
+                    <tr><td>&nbsp2&nbsp</td><td>&nbsp3&nbsp</td><td class="borda">&nbsp4&nbsp</td><td>&nbsp2&nbsp</td></tr>
+                    <tr><td>&nbsp1&nbsp</td><td>&nbsp3&nbsp</td><td class="borda">&nbsp2&nbsp</td><td>&nbsp2&nbsp</td></tr>
+                    <tr><td>&nbsp1&nbsp</td><td>&nbsp3&nbsp</td><td class="borda">&nbsp1&nbsp</td><td>&nbsp3&nbsp</td></tr>
+                    <tr><td>&nbsp1&nbsp</td><td>&nbsp1&nbsp</td><td class="borda">&nbsp1&nbsp</td><td class="borda-cima">&nbsp2 ** 4 = 2 x 2 x 2 x 2 = 16&nbsp</td></tr>
+                </table>
+                <h3>Algorítmo de Euclides</h3>
+                <p>Outra forma de calcular o mdc é fazendo o seguinte processo. mdc(a, b) = mdc(a, ( | a - b | )). Como no exemplo:</p>
+                <p>A linha Q é a linha do quociente (resultado da divisão), a linha R é a linha do resto, enquanto a linha do meio é a linha que fazemos as divisões.</p>
+                <table>
+                    <caption>mdc(32, 48)</caption>
+                    <tr><td class="borda">&nbspQ&nbsp</td><td class="borda">&nbsp1&nbsp</td><td  class="borda">&nbsp2&nbsp</td></tr>
+                    <tr><td class="borda">&nbsp48&nbsp</td><td class="borda">&nbsp32&nbsp</td><td class="borda">&nbsp16&nbsp</td></tr>
+                    <tr><td class="borda">&nbspR&nbsp</td><td class="borda">&nbsp16&nbsp</td><td class="borda">&nbsp0&nbsp</td><td class="borda-cima">mdc(48, 32) = 16</td></tr>
+                </table>
+                <p>Se quisermos, o mdc de mais de 2 números. Basta apenas calcularmos o mdc destes números de 2 em 2. Exemplo: mdc(32, 48, 64) = mdc(mdc(32, 48), 64)</p>
+            </div>
+            <div class="codigo">
+                <h3>Código Javascript</h3>
+                <pre><p class="codigo">function mdc(a, b) {
+    while (b != 0) {
+        resto = a % b
+        a = b
+        b = resto
+    }
+
+    return a
+}</p></pre>
             </div>
         </section>
 
