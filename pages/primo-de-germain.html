@@ -46,6 +46,47 @@
                 <input type="button" value="Calcule!" onclick="verificar_germain()">
                 <p id="resposta"><br></p>
             </div>
+            <h2>Explicação</h2>
+            <div class="texto">
+                <p>A matemática francesa Marie-Sophie Germain, introduziu em seus cálculos um novo tipo de número. Que tendo como p, um número primo, se 2p + 1 também for primo, então p é primo de Germain.</p>
+                <p>Utilizando o número primo 3 como exemplo:</p>
+                <div>2 x p + 1<br>2 x 3 + 1<br>6 + 1<br>7</div>
+                <p>E 7 é um número primo, o que faz do 3, um primo de Germain.</p>
+                <p>Utilizando o número primo 11 como exemplo:</p>
+                <div>2 x p + 1<br>2 x 11 + 1<br>22 + 1<br>23</div>
+                <p>E 23 também é primo. Logo 11 é primo de Germain.</p>
+            </div>
+            <h2>Código Javascript</h2>
+            <div class="codigo">
+                <pre><p class="codigo">//Vê se "possivel_primo" é de fato primo
+function calcular_primo(possivel_primo) {
+    divisores = 0
+    numero = 0
+
+    while (possivel_primo != numero) {
+        numero ++
+
+        if (possivel_primo % numero == 0) {
+            divisores ++
+        }
+    }
+
+    if (divisores == 2) {
+        return true
+    } else {
+        return false
+    }
+}
+
+//Vê se "numero" é primo de Germain
+function primo_germain(numero) {
+    if (calcular_primo(numero * 2 + 1)) {
+        return true
+    } else {
+        return false
+    }
+}</p></pre>
+            </div>
         </section>
 
         <footer>
