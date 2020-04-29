@@ -118,6 +118,7 @@ function verificar_germain() {
         }
     }
 }
+
 function primo_germain(numero) {
     if (calcular_primo(numero * 2 + 1)) {
         return true
