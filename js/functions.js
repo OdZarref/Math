@@ -105,11 +105,11 @@ function verificar_germain() {
     var resposta = document.querySelector('p#resposta')
 
     if (numero.value.length == 0) {
-        resposta.innerHTML = 'Preencha o campo acima!'
+        resposta.innerHTML = 'Preencha o campo acima!<br><br><br>'
     } else if (numero.value < 0) {
-        resposta.innerHTML = 'Digite um número natural!'
+        resposta.innerHTML = 'Digite um número natural!<br><br><br>'
     } else if (!calcular_primo(numero.value)) {
-        resposta.innerHTML = 'O número digitado não é primo!'
+        resposta.innerHTML = 'O número digitado não é primo!<br><br><br>'
     } else {
         if (primo_germain(numero.value)) {
             resposta.innerHTML = `Primo de Sophie Germain!<br>2 x ${numero.value} + 1 = ${numero.value * 2 + 1}<br>${numero.value * 2 + 1} também é primo!`
