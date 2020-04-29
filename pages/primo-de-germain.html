@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="../css/normalize.css">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet"> 
-        <title>Calcule!</title>
+        <title></title>
     </head>
     <body>
         <nav>
@@ -39,47 +39,13 @@
         </nav>
 
         <section>
-            <div id="primo">
-                <h3>
-                    <a href="primo.html">
-                        Número Primo
-                    </a>
-                </h3>
-                <p>Um número primo. É aquele que tem apenas dois divisores. O um e ele mesmo.</p>
+            <h1>Primo de Sophie Germain</h1>
+            <p>Onde p é primo, se 2p + 1 for também primo. Então p é primo de Sophie Germain.</p>
+            <div>
+                <input type="number" class="caixa_texto_numero" id="caixa_texto_numero">
+                <input type="button" value="Calcule!" onclick="verificar_germain()">
+                <p id="resposta"><br></p>
             </div>
-            <div id='primo-de-sophie-germain'>
-                <h3>
-                    <a href="primo-de-germain.html">
-                        Número Primo de Sophie Germain
-                    </a>
-                </h3>
-                <p>Onde p é primo, se 2p + 1 for também primo. Então p é primo de Sophie Germain.</p>
-            </div>
-            <div id="fatorial">
-                <h3>
-                    <a href="fatorial.html">
-                        Fatorial
-                    </a>
-                </h3>
-                <p>O cálculo do fatorial de n, consiste na multiplicação sucessiva de n pelos números naturais menores que ele.</p>
-            </div>
-            <div id="mmc">
-                <h3>
-                    <a href="mmc.html">
-                        Mínimo Múltiplo Comum
-                    </a>
-                </h3>
-                <p>Tendo como base a e b, o mmc(a, b) é o menor produto simultâneo de a e b.</p>
-            </div>
-            <div id="mdc">
-                <h3>
-                    <a href="mdc.html">
-                        Máximo Divisor Comum
-                    </a>
-                </h3>
-                <p>Seguindo uma lógica parecida com o mmc, o mdc(a, b) é o menor número que divide a e b.</p>
-            </div>
-
         </section>
 
         <footer>
@@ -93,5 +59,6 @@
                 </a>
             </div>
         </footer>
+        <script src="../js/functions.js"></script>
     </body>
 </html>

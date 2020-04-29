@@ -30,7 +30,12 @@ function verificar_primo() {
         resposta.innerHTML = 'O número deve ser inteiro positivo!'
     } else {
         numero = parseInt(numero.value)
-        resposta.innerHTML = calcular_primo(numero)
+
+        if (calcular_primo(numero)) {
+            resposta.innerHTML = 'É primo!'
+        } else {
+            resposta.innerHTML = 'Não é primo!'
+        }
     }
 }
 
@@ -47,9 +52,9 @@ function calcular_primo(possivel_primo) {
     }
 
     if (divisores == 2) {
-        return 'É primo!'
+        return true
     } else {
-        return 'Não é primo!'
+        return false
     }
 }
 
@@ -93,4 +98,30 @@ function mdc(a, b) {
     }
 
     return a
+}
+
+function verificar_germain() {
+    var numero = document.querySelector('input#caixa_texto_numero')
+    var resposta = document.querySelector('p#resposta')
+
+    if (numero.value.length == 0) {
+        resposta.innerHTML = 'Preencha o campo acima!'
+    } else if (numero.value < 0) {
+        resposta.innerHTML = 'Digite um número natural!'
+    } else if (!calcular_primo(numero.value)) {
+        resposta.innerHTML = 'O número digitado não é primo!'
+    } else {
+        if (primo_germain(numero.value)) {
+            resposta.innerHTML = `Primo de Sophie Germain!<br>2 x ${numero.value} + 1 = ${numero.value * 2 + 1}<br>${numero.value * 2 + 1} também é primo!`
+        } else {
+            resposta.innerHTML = `Não é primo de Sophie Germain!<br>2 x ${numero.value} + 1 = ${numero.value * 2 + 1}<br>${numero.value * 2 + 1} não é primo!`
+        }
+    }
+}
+function primo_germain(numero) {
+    if (calcular_primo(numero * 2 + 1)) {
+        return true
+    } else {
+        return false
+    }
 }
