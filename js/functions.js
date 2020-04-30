@@ -132,7 +132,7 @@ function fatores_numero(numero) {
     primo = 2
 
     while (numero != 1) {
-        if (numero % primo == 0) {
+        if (numero % primo == 0 && calcular_primo(primo)) {
             fatores.push(primo)
             numero /= primo
         } else {
