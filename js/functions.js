@@ -126,3 +126,23 @@ function primo_germain(numero) {
         return false
     }
 }
+
+function fatores_numero(numero) {
+    fatores = [] 
+    primo = 2
+
+    while (numero != 1) {
+        if (numero % primo == 0) {
+            fatores.push(primo)
+            numero /= primo
+        } else {
+            if (primo == 2) {
+                primo ++
+            } else {
+                primo += 2
+            }
+        }
+    }
+
+    return fatores
+}
