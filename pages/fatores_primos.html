@@ -37,9 +37,71 @@
             </li>
             </ul>
         </nav>
-
         <section>
-            <h2>Decomposição em Fatores Primos</h2>
+            <h1>Decomposição em Fatores Primos</h1>
+            <p>Os fatores de n se dão através da divisão sucetiva de n por números primos. Os primos que forem divisores de n, são seus fatores.</p>
+            <div>
+                <input type="number" class="caixa_texto_numero" id="caixa_texto_numero" placeholder="ex: 332">
+                <input type="button" value="Calcule!" onclick="verificar_numero_decomposicao()">
+                <p id="resposta"><br></p>
+            </div>
+            <h2>Explicação</h2>
+            <div class="texto">
+                <p>Todo número composto, ou seja, todo número que tem mais de 2 divisores, pode ser escrito através de seus fatores primos. Que são encontrados através da decomposição deste por números primos. Observe: </p>
+                <table>
+                    <caption></caption>
+                    <tr><td class="borda">36</td><td>2</td></tr>
+                    <tr><td class="borda">18</td><td>2</td></tr>
+                    <tr><td class="borda">9</td><td>3</td></tr>
+                    <tr><td class="borda">3</td><td>3</td></tr>
+                    <tr><td class="borda">1</td><td class="borda-cima">2 x 2 x 3 x 3 = 36</td></tr>
+                </table>
+                <p>Com isso encontramos os fatores primos de 36, que são 2 ^ 2 x 3 ^ 2.</p>
+            </div>
+            <h2>Código Javascript</h2>
+            <div class="codigo">
+                <pre><p class="codigo">
+//Calcula o número primo
+function primo(possivel_primo) {
+    divisores = 0
+    numero = 0
+
+    while (possivel_primo != numero) {
+        numero ++
+
+        if (possivel_primo % numero == 0) {
+            divisores ++
+        }
+    }
+
+    if (divisores == 2) {
+        return true
+    } else {
+        return false
+    }
+}
+
+//Calcula os fatores primos
+function fatores_numero(n) {
+    fatores = []
+    primo = 2
+
+    while (n != 1) {
+        if (n % primo == 0 && primo(primo)) {
+            fatores.push(primo)
+            n /= primo
+        } else {
+            if (primo == 2) {
+                primo ++
+            } else {
+                primo += 2
+            }
+        }
+    }
+
+    return fatores
+}</p></pre>
+            </div>
         </section>
 
         <footer>
@@ -53,5 +115,6 @@
                 </a>
             </div>
         </footer>
+    <script src="../js/functions.js"></script>
     </body>
 </html>
