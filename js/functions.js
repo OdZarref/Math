@@ -127,8 +127,23 @@ function primo_germain(numero) {
     }
 }
 
+function verificar_numero_decomposicao() {
+    var numero = window.document.querySelector('input#caixa_texto_numero')
+    var resposta = window.document.querySelector('p#resposta')
+
+    if (numero.value.length == 0) {
+        resposta.innerHTML = 'Preencha o campo acima!'
+    } else if (numero.value < 2){
+        resposta.innerHTML = 'Digite um número maior que 1!'
+    } else if (calcular_primo(numero.value)) {
+        resposta.innerHTML = `${numero.value} é primo. Logo seu fator primo é ele mesmo.`
+    } else {
+        resposta.innerHTML = `Os fatores de ${numero.value} são : ${fatores_numero(numero.value).toString().replace(/,/g,'x')}`
+    }
+}
+
 function fatores_numero(numero) {
-    fatores = [] 
+    fatores = []
     primo = 2
 
     while (numero != 1) {
