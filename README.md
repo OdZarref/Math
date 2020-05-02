@@ -16,6 +16,8 @@
     * [x] Resposividade com mobile
 * [ ] Páginas de Cálculos
     * [x] Número Primo
+    * [x] Primo de Germain
     * [x] Fatorar um Número
-    * [ ] Mínimo Múltiplo Comum
-    * [ ] Máximo Divisor Comum
+    * [x] Fatorial
+    * [x] Mínimo Múltiplo Comum
+    * [x] Máximo Divisor Comum
