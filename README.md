@@ -6,18 +6,19 @@
 
 * [x] Idealização
 * [x] Criação do projeto
-* [ ] Principal
+* [x] Principal
     * [x] Definir Layout
     * [x] Página Principal
     * [x] Calcule!
     * [x] Contato
     * [x] Sobre
-    * [ ] Black Mode e White Mode
     * [x] Resposividade com mobile
-* [ ] Páginas de Cálculos
+* [x] Páginas de Cálculos
     * [x] Número Primo
     * [x] Primo de Germain
     * [x] Fatorar um Número
     * [x] Fatorial
     * [x] Mínimo Múltiplo Comum
     * [x] Máximo Divisor Comum
+* [ ] A fazer
+   * [ ] Black Mode e White Mode
